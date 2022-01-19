@@ -1,0 +1,77 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\DeclareMathOperator\asinh{asinh}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm]{geometry}
+%\usepackage[output-decimal-marker={,}]{siunitx}
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{chemformula}
+\usepackage[document]{ragged2e}
+\usepackage{SIunits}
+\begin{document}
+\section{Sampe preparation}
+
+\paragraph{Cleaning protocol}
+\begin{itemize}
+  \item Put the substrate in \textbf{acetone} and make ultrasound bath for 5 minutes
+  \item Put the substrate in \textbf{isopropanol} and make ultrasound bath for 5 minutes
+  \item Plasma cleaning for 5 minutes
+\subparagraph{How to use the plasma cleaner}
+The cleaner door is kept close by the vacuum inside. First thing first, break the vaccum by turning the valve. After the sample is placed inside and the door is closed, move the switch to start the pumping. The pressure should reach approximately \unit{5e-2}{}mbar to be considered in vacuum. We now need to make oxygen flow inside. In order to do so, we open the oxygen valve just the sufficient amount to see the pressure rise up to \unit{10}{}mbar. When the pressure is at \unit{10e-1}{}mbar, we can switch the ON button.
+\end{itemize}
+\paragraph{Spin coating}
+In performing e-beam lithography with dielectric substrates, we need to apply a layer of conductive material (Electra) that would evacuate the charges from the substrate.
+
+
+Place the substrate on the spinning plate and turn on the vaccum. The vacuum is considered good with a value of 0.6 or more from th e display.
+\begin{itemize}
+  \item Use \textbf{recipe 4} to spin the deposit enhancer
+  \item Pass 60 seconds in \ch{H2O}, stirring by hand
+  \item Wait 2-3 minutes for the water to evaporate
+  \item Use \textbf{recipe 1} to spin XR 1541 (HSQ)
+  \item 4 minutes at \unit{80}{\celsius} on hot plate
+  \item Use \textbf{recipe 10} to spin Electra
+  \item 2 minutes at \unit{80}{\celsius} on hot plate
+\end{itemize}
+\paragraph{Development}
+\begin{itemize}
+  \item 1 minute in \ch{H2O} stirring by hand
+  \item prepare two beckers, one with \ch{H2O} and the other with \textbf{AZ400K + \ch{H2O} (1:3)} (the developer)
+  \item 1 minute in developer stirring by hand
+  \item wash in \ch{H2O}
+\end{itemize}
+\newpage
+\section{ E-beam lithography}
+We control the machine by two screens. The one on the left is used to control the parameters of lithography, the right on is used to make images. Before insertring the sample in the chamber, make a scrath on a useless part of the surface.
+\begin{itemize}
+  \item Break the vacuum in the chamber
+  \item Insrt the sample
+  \item Press 'pump' to create the vaccum (we can hear the noise from the pump)
+  \item Wait 15 minutes
+  \item Go on Reglage and set \unit{20}{\kilo\volt}, \unit{10}{\micro\metre},\unit{8}{\milli\metre}
+  \item In order to move the objectve on the sample, load the 'wafermap' and while pressing 'ctrl' right click on the desired point
+  \item Place you r axis reference at the bottom-left of the sample
+  \item Use the scratch previously made to adust the focus. We should be able to obtain a neat image up to a magnification of x170000. The focus and the magnification can be adjusted by keeping the right/left button pressed and moving the mouse
+  \item Make the contamination dot. It is used for the calibration of the writing field
+  \item Calibrate the writing field. The parameters that have be changed are the zoom, the shift and the rotation
+  \item The electra resin is heavily carbonated, this allows the contamination dot to be very well made on it
+  \item Use the 'Focus wabble' function (the sample goes out and in focus back and forth repeatedly) to check that the beam goes through the objcetive axis
+  \item Use the 'Aperture align' command to control the objective
+  \item It is adviced not to have structures on the boundaries of the writing fields, because in this zones we can hqve an uncertainty up to \unit{20}{\nano\metre}
+  \item Faraday cup (check again this point)
+  \item Once we are inside the Faraday cage, click on 'measure' to check the stability of the beam
+  \item Insert in 'Position list' all the structures that you want to make in sequence. It is a good thing to add the bealm shutdown as last assignment
+fff
+
+\end{itemize}
+
+ \end{document}
