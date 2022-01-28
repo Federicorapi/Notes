@@ -1,0 +1,57 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\DeclareMathOperator\asinh{asinh}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm]{geometry}
+%\usepackage[output-decimal-marker={,}]{siunitx}
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{chemformula}
+\usepackage[document]{ragged2e}
+\usepackage{SIunits}
+\begin{document}
+\section{Protocol for AFM}
+\begin{itemize}
+  \item Put the sample on the rotating sample holder on top of the vacuum hole
+  \item Turn on the vacuum
+  \item Launch the sofware NanoDrive
+  \item Turn the sample holder under the cantilever
+  \item Select the tapping mode
+  \item Select 'Load experiment'
+  \item Use the 'Tip' pr 'Surface' schedes to move the focus and make the image of the two planes respectively
+  \item Adjust the focus on the tip. Use a high magnification and make sure that the edges of the cantilever are sharp
+  \item The red cross on the screen is used as a reference to know where to move. use the mouse to move on the image
+  \item Focus on the sample (the focal distance should be around \unit{2}{\milli\meter})
+  \item Use the XY motion command to move the plate under the cantilever
+  \item Place the red cross under the zone we want to study. During the approah, the cantilever will drift slight to the left, so it is better to place the red cross slightly on the right of the zone
+  \item Make sure that the laser spot is well centerd in the detector. The voltage in both directions should not be higher than 0.05 V. If it is not the case, use the screws on the side of the cantiliver holder to adjust the postion of the laser
+  \item We must tell the cantiliver to find its own resonating frequency. Select the \unit{0-100}{\kilo\hertz} range, auto tune and press start. The phase line should be plane on the sides and the frequency line should be a lorentzian peak
+  \item When we are around the zone we want to study, we approach the tip to the sample. At the end of this procedure we will hear a sound from the machine
+  \item Add to the three channels already there a fourth one: height sensor backward, then press ok
+  \item Define the scan parameters:
+          \begin{itemize}
+              \item 'Samples' and 'lines' are linked and equal. Select 64 for a quick scan. 128 to measure a thickness. 256 for the rugosity
+              \item Scan rate \unit{0.5}{\hertz}
+              \item Scan range: \unit{50}{\micro\meter} to have a wide image of the zone. \unit{2}{\micro\meter} to measure the rugosity
+              \item Rotation \unit{0}{\celsius}
+              \item X-Y offset at 0
+              \item In any case, the sum of the X-Y offset and the scan range can't be higher than \unit{100}{\micro\meter}
+          \end{itemize}
+\item Press the green button to start the acquisition
+\item Adjust the tilt angle of the sample with the '1D line fit'
+\item In order to center precisely after the first big scan, open the 'Scan area' tab and drag and drop one of the four images on the tab
+\item Add the square by moving the mouse and confrim with a right click
+\item Right click on the image and chose 'send to image anlysis'
+The save command registers the four images we obtained. In our convention, the 'Height sensor Forward' is the one corrected by the line fit
+\item For the rugosity, make sure to have a small window of about \unit{2}{\micro\meter}, otherwise the values obtained won't be reliable
+\end{itemize}
+
+\end{document}
